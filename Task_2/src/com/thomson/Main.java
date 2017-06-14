@@ -9,7 +9,7 @@ public class Main {
 			"Dec" };
 
 	public static void main(String[] args) {
-		DateProvider data = new DateProvider();
+		DataProvider data = new DataProvider();
 		CapacityCalculator etc = new CapacityCalculator();
 
 		// Creating a map of months and days from URL address and printing to console

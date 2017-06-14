@@ -10,13 +10,13 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class DateProvider {
+public class DataProvider {
 
 	private static final String PATH = "http://www.mercado.ren.pt/EN/Electr/MarketInfo/Interconnections/CapForecast/Pages/Daily.aspx";
 	private Map<String, Integer> mapMonths;
 	private Document doc;
 
-	public DateProvider() {}
+	public DataProvider() {}
 
 
 	public String getNewMonth(Map<Integer, String> map, Integer key) {
