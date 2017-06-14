@@ -40,7 +40,7 @@ public class CapacityCalculator {
 		int dayForecastCapacitySum = 0;
 
 		for (int i = 0; i < 24; i++) {
-			if (keyList.get(i).equals("txtrPREV")) {
+			if (keyList.get(i).equals("txtrPREV") || keyList.get(i).equals("txtPREV")) {
 				int one = valueList.get(i);
 				dayForecastCapacitySum += one;
 			}
