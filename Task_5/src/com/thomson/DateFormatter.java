@@ -2,11 +2,9 @@ package com.thomson;
 
 import java.util.Locale;
 
-import org.joda.time.Chronology;
 import org.joda.time.LocalDate;
-import org.joda.time.base.AbstractDateTime;
 
-public class DateFormatter extends AbstractDateTime {
+public class DateFormatter  {
 
 	private LocalDate localDate = new LocalDate(2017, 06, 02);
 	private Locale local = new Locale("en");
@@ -44,14 +42,5 @@ public class DateFormatter extends AbstractDateTime {
 		return getsDay() + " " + getsMonth() + " " + localDate.getDayOfMonth() + " " + getsYear();
 	}
 
-	@Override
-	public Chronology getChronology() {
-		return null;
-	}
-
-	@Override
-	public long getMillis() {
-		return 0;
-	}
 
 }

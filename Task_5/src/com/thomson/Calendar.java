@@ -10,14 +10,13 @@ import org.joda.time.LocalDate;
 public class Calendar {
 
 	public static void main(String[] args) {
-		LocalDate date;
-		DateFormatter md;
-
-		Scanner sc = new Scanner(System.in);
-
 		System.out.println("Choose method to get calendar :" + "\n1 - from one period for specified number of days"
 				+ "\n2 - from one period of time to other ");
 
+		Scanner sc = new Scanner(System.in);
+		
+		LocalDate date;
+		DateFormatter md;
 		switch (sc.nextInt()) {
 		case 1:
 			System.out.println("year: ");
@@ -26,19 +25,18 @@ public class Calendar {
 			int month = sc.nextInt();
 			System.out.println("day: ");
 			int day = sc.nextInt();
-
 			System.out.println("Number of days: ");
 			int period = sc.nextInt();
 
 			System.out.println("\nThis is your calendar for " + period + " next days: \n");
-
 			date = new LocalDate(year, month, day);
-
 			md = new DateFormatter(date);
-
+			
 			// Print a list of data from one period for specified number of days
 			printList(addDateToList(md, date, period));
+			
 			break;
+			
 		case 2:
 			// Print a list of data from one period of time to other
 			System.out.println("year: ");
@@ -48,11 +46,11 @@ public class Calendar {
 			System.out.println("day: ");
 			day = sc.nextInt();
 
-			System.out.println("other year: ");
+			System.out.println("next year: ");
 			int year2 = sc.nextInt();
-			System.out.println("other month: ");
+			System.out.println("next month: ");
 			int month2 = sc.nextInt();
-			System.out.println("other day: ");
+			System.out.println("next day: ");
 			int day2 = sc.nextInt();
 
 			date = new LocalDate(year, month, day);
@@ -64,7 +62,9 @@ public class Calendar {
 					"\nThis is your calendar from " + date.toString() + " to " + date2.toString() + " next days: \n");
 			printList(addDateToList(md, date, limitDays));
 			break;
+			
 		default:
+			System.out.println("Put right number <1,2>");
 			sc.close();
 		}
 	}
